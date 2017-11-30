@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+    <center>
+        <h1>Menu</h1> 
+        <hr width="=60%"/> 
+
+        <div><strong>You have successfully login in</strong></div>
+        <hr width="30%"/> 
+        
+        <br>
+        <form action="http://localhost:8080/Bank/menuJSP.jsp" method="post">
+            <div>View Account Information</div>
+            <hr width="10%"/> 
+            <input type="submit" name="View" value="View"/>
+        </form>   
+            <br>
+        <form action="http://localhost:8080/Bank/menuJSP.jsp" method="post">
+            <div>Make Transaction between Accounts</div>
+            <hr width="25%"/> 
+            <div><em>Which account would you like to transfer from?</em>
+                <select name="transferFrom">
+                    <option>savings </option>
+                    <option>checking</option>
+                    <option>moneyMarket</option>
+                </select>
+            <div>
+                <br>
+                <div><em>Which account would you like to transfer to?</em>
+                <select name="transferTo">
+                     <option>savings </option>
+                     <option>checking</option>
+                     <option>moneyMarket</option>
+                 </select> 
+            <div>      
+                <br>  
+                <div><em>How much would you like to transfer?</em><strong>$
+                    </strong>
+                <input type="text" name="amount" value="" size="5"/>
+            </div>
+                <br>
+            <input type="submit" name="Transfer" value="Transfer"/>   
+        </form>
+            <br>
+        <form action="http://localhost:8080/Bank/menuJSP.jsp" method="post">
+            <form action="" method="post" >
+            <div>View all your Transaction</div>
+            <hr width="50%"/> 
+            <em>Enter a date where you would like to see where your
+                    transactions begin: Type in Format(yyyy-mm-dd)</em>
+            <input type="text" name="startDate" value=""/>    
+            <br><br>    
+            <em>Enter a date where you would like to see where your
+                    transactions begin: Type in Format(yyyy-mm-dd)</em>
+            <input type="text" name="endDate" value=""/>
+            <br>
+            <input type="submit" name="View Transactions" 
+                   value="View Transactions"/>   
+        </form>
+            <br>
+        <form action="http://localhost:8080/Bank/menuJSP.jsp" method="POST">
+            <div>Choose an account to make a deposit</div>
+            <hr width="30%"/> 
+                <select name="accountDeposit">
+                    <option>savings </option>
+                    <option>checking</option>
+                    <option>moneyMarket</option>
+                </select>
+                
+                <div><em>How much would you like to deposit?</em><strong>$
+                    </strong>
+                <input type="text" name="amountDeposit" value="" size="5"/>
+            </div>
+            
+              <input type="submit" name="Deposit" value="Deposit"/>
+        </form>
+            <br>
+            
+            <form action="http://localhost:8080/Bank/menuJSP.jsp" method="POST">
+            <div>Choose an account to make a withdrawl</div>
+            <hr width="30%"/> 
+                <select name="accountWithdraw">
+                    <option>savings</option>
+                    <option>checking</option>
+                    <option>moneyMarket</option>
+                </select>
+                
+                <div><em>How much would you like to withdraw?</em><strong>$
+                    </strong>
+                <input type="text" name="amountWithdraw" value="" size="5"/>
+            </div>
+            
+              <input type="submit" name="Withdraw" value="Withdraw"/>
+        </form>
+            <br>
+            
+        <form action="http://localhost:8080/Bank/jspLogin.jsp" method="post"
+
+              <strong>Sign out of user </strong> 
+                <hr width="10%"/> 
+              <br>
+              <input type="submit" name="Log Out" value="Log Out"/>          
+        </form>
+    </center>
+    </body>
+</html>
